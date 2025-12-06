@@ -48,19 +48,19 @@ class OdomTFPublisher(Node):
         t.transform.rotation.w = 1.0
         self.br.sendTransform(t)
 
-        #t = TransformStamped()
-        #t.header.stamp = msg.header.stamp
-        #t.header.stamp = self.get_clock().now().to_msg()
-        #t.header.frame_id = "map"
-        #t.child_frame_id = "odom"
-        #t.transform.translation.x = 0.0
-        #t.transform.translation.y = 0.0
-        #t.transform.translation.z = 0.0
-        #t.transform.rotation.x = 0.0
-        #t.transform.rotation.y = 0.0
-        #t.transform.rotation.z = 0.0
-        #t.transform.rotation.w = 1.0
-        #self.br.sendTransform(t)
+        t = TransformStamped()
+        t.header.stamp = msg.header.stamp
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = "map"
+        t.child_frame_id = "odom"
+        t.transform.translation.x = 0.0
+        t.transform.translation.y = 0.0
+        t.transform.translation.z = 0.0
+        t.transform.rotation.x = 0.0
+        t.transform.rotation.y = 0.0
+        t.transform.rotation.z = 0.0
+        t.transform.rotation.w = 1.0
+        self.br.sendTransform(t)
 
     def pc_callback(self, msg):
         try:
@@ -86,4 +86,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 

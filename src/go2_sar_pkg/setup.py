@@ -30,7 +30,12 @@ setup(
         'console_scripts': [
             'simple_navigator = go2_sar_pkg.simple_navigator:main',
             'odom_tf_broadcaster = go2_sar_pkg.odom_tf_broadcaster:main',
-        ],
+            'odom_tf_broadcaster2 = go2_sar_pkg.odom_tf_broadcaster2:main',
+            'odom_tf_broadcaster3 = go2_sar_pkg.odom_tf_broadcaster3:main',
+            'odom_tf_broadcaster4 = go2_sar_pkg.odom_tf_broadcaster4:main',
+            'local_costmap = go2_sar_pkg.local_costmap:main',
+            'fake_dog_maps = go2_sar_pkg.fake_dog_maps:main',
+            ],
     },
 )
 
