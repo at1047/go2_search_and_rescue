@@ -1,0 +1,23 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VSCode stuff (optional)
+.vscode/
+
+# Docker Python artifacts inside container
+docker/*.pyc
+
+# UV virtual environment
+uv_env/
+opt/uv_env/
+
+# Editor swap files
+*.swp
+*.swo
