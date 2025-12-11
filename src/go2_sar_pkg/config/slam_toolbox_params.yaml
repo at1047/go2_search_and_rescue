@@ -1,0 +1,72 @@
+#slam_toolbox:
+#  ros__parameters:
+#    use_sim_time: false
+#
+#    # Modes: "mapping", "localization", "lifecycle"
+#    mode: "mapping"
+#
+#    map_frame: map
+#    odom_frame: odom
+#    base_frame: base_link
+#    scan_topic: /utlidar/scan
+#    scan_qos: "sensor_data" # for QoS compatibility with LaserScan
+#
+#    # How often to publish map->odom
+#    transform_publish_period: 0.02  # 50 Hz
+#
+#    # Map settings
+#    resolution: 0.05
+#    map_update_interval: 0.2
+#    max_laser_range: 10.0
+#    minimum_time_interval: 0.1
+#
+#    transform_timeout: 1.5
+#    tf_buffer_duration: 30.0
+#    transform_tolerance: 1.5
+#    scan_queue_size: 1000
+#    restamp_tf: false
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false
+    mode: "mapping"
+
+    # Frame IDs
+    map_frame: map
+    odom_frame: odom
+    base_frame: base_link
+    
+    # SENSOR SETTINGS
+    # 1. Matches your real topic
+    scan_topic: /utlidar/scan
+    # 2. Matches your real Lidar (Unitree L1 is ~4m effective, usually)
+    max_laser_range: 2.0 
+    min_laser_range: 0.5  # change this to see if creates a fix
+
+    # QOS OVERRIDES
+    # This must match 'scan_topic' above EXACTLY
+    qos_overrides:
+      /utlidar/scan:
+        subscription:  # <--- YOU MISSED THIS LINE
+          reliability: "best_effort"
+
+    # TIMING & TF
+    transform_publish_period: 0.02  # 50 Hz
+    map_update_interval: 0.5   #0.5     # Increased slightly to reduce CPU load
+    minimum_time_interval: 0.5  #0.1 
+    transform_timeout: 0.5          # 0.5s is usually plenty; 1.5s is safe but laggy
+    tf_buffer_duration: 30.0
+    scan_queue_size: 10
+    
+    # Map Resolution (0.05 = 5cm)
+    resolution: 0.05
+    
+    min_score: 0.7  # New trying to fix slam not updating     
+    minimum_travel_distance: 0.0 # 0.5
+    minimum_travel_heading: 0.0 # 0.5
+    use_scan_header_stamp: false # trying to fix slam not updating
+
+    # CHECKING IF THIS IS THE REASON THE TF TREE DOESNT WORK
+    use_scan_matching: true
+    use_loop_closure: false
+    do_loop_closing: false
+    

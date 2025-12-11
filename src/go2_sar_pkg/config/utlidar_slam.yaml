@@ -1,0 +1,32 @@
+slam_toolbox:
+  ros__parameters:
+    # ---- Frames ----
+    map_frame: map
+    odom_frame: odom
+    base_frame: base_link
+
+    # This MUST match your lidar scan topic
+    scan_topic: /utlidar/scan          # change to /utlidar/scan or whatever you actually use
+
+    # ---- Core behavior ----
+    mode: mapping              # mapping-only mode
+    use_sim_time: false
+
+    # We ALREADY have odom -> base_link, so:
+    use_odometry: false
+    provide_odom_frame: false  # <---- slam_toolbox should NOT create its own odom frame
+    publish_tf: false    # <---- slam publishes map -> odom
+    optimization_period: 30.0    # every 30 seconds
+
+    # ---- Timing ----
+    transform_publish_period: 0.05
+    map_update_interval: 0.2
+
+    # ---- Scan matching (just sane defaults) ----
+    use_scan_matching: true
+    use_scan_barycenter: true
+    minimum_travel_distance: 0.0 #0.1
+    minimum_travel_heading: 0.0 #0.1
+    resolution: 0.05
+    max_laser_range: 8.0
+
