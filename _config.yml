@@ -1,41 +1,6 @@
 title: Go2 Search and Rescue
-description: A robotics search and rescue project using Go2
-url: ""
-baseurl: ""
+theme: jekyll-theme-cayman
+show_downloads: true
 
-theme: jekyll-theme-chirpy
-permalink: /posts/:title/
-
-timezone: America/Los_Angeles
-
-markdown: kramdown
-highlighter: rouge
-
-plugins:
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-sitemap
-  - jekyll-include-cache
-
-collections:
-  tabs:
-    output: true
-    sort_by: order
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: true
-  - scope:
-      path: ""
-    values:
-      layout: page
-  - scope:
-      path: "_tabs"
-      type: tabs
-    values:
-      layout: page
+kramdown:
+  input: GFM

@@ -1,13 +1,10 @@
 ---
-layout: page
+layout: default
 title: Results
-permalink: /results/
-icon: fas fa-chart-line
-order: 3
 ---
 
 
-# **4\. Results** {#4.-results}
+# Results
 
 **Overview:**
 

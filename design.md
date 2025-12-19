@@ -1,12 +1,9 @@
 ---
-layout: page
-title: Design
-permalink: /design/
-icon: fas fa-pencil-ruler
-order: 1
+layout: default
+title: Design 
 ---
 
-# **2.Design** {#2.design}
+# Design
 
 *Design criteria and desired functionality*
 

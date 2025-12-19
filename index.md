@@ -1,15 +1,15 @@
 ---
-layout: page
-title: Go2 Search and Rescue
+layout: default
+title: Introduction
 ---
 
-# **1.Introduction** {#1.introduction}
+# Introduction
 
 Autonomous Exploration and Navigation for Quadruped Robots in Search and Rescue
 
 The challenge of autonomous robotic operation in hazardous, unknown environments is critical, particularly within the Search and Rescue (SAR) sector, a global market projected to reach $15.7 billion by 2031 [\[1\]](https://www.6wresearch.com/market-takeaways-view/how-big-is-the-search-and-rescue-market). Developing reliable autonomous systems is essential for improving human safety and mission efficiency in disaster zones.
 
-*Project Goal*
+## Project Goal
 
 The core goal is to develop and open-source a robust, autonomous exploration framework for the Unitree Go2 quadruped robot. This system must be capable of collision-free traversal and real-time environment mapping in unstructured, debris-filled spaces, integrating onboard odometry, the Navigation2 stack, and a custom frontier-based planning algorithm.
 
@@ -32,3 +32,29 @@ The resulting framework is directly transferable to high-value robotics applicat
 * Planetary and Scientific Exploration on extraterrestrial bodies.
 
 Crucially, this work contributes an open-source, documented approach to Unitree Go2 LiDAR integration and navigation, facilitating future SAR and general robotics research on this platform.
+
+# Team
+
+Jason:  
+*Bio:*  
+Jason is a Mechanical Engineering graduate student specializing in Robotics, with experience in advanced motion control systems for quadruped robots.
+
+*Major Contributions:*
+
+Denae:  
+*Bio:*  
+Denae is a PhD student in the EECS department, whose current project focuses on simulating a frontier-based exploration strategy for a quadruped robot.
+
+*Major Contributions:*
+
+Kabir:  
+*Bio:*  
+Kabir is an EECS undergrad student. He has worked on some projects involving autonomous vehicles and distributed ML systems.
+
+*Major Contributions:*
+
+Andrew:  
+*Bio:*  
+Andrew is a Mechanical Engineering graduate student specializing in Robotics with industry software engineering experience.
+
+*Major Contributions:*

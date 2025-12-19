@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">GO2 Search and Rescue</h1>
+      <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
+      
+      <!-- {% if site.show_downloads %}
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %} -->
+      
+      <nav style="margin-top: 1rem;">
+        <a href="{{ site.baseurl }}/" class="btn">Intro</a>
+        <a href="{{ site.baseurl }}/design" class="btn">Design</a>
+        <a href="{{ site.baseurl }}/implementation" class="btn">Implementation</a>
+        <a href="{{ site.baseurl }}/results" class="btn">Results</a>
+        <a href="{{ site.baseurl }}/conclusion" class="btn">Conclusion</a>
+      </nav>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">Generated with <a href="https://jekyllrb.com">Jekyll</a> using the <a href="https://github.com/pages-themes/cayman">Cayman</a> theme.</span>
+      </footer>
+    </main>
+  </body>
+</html>
