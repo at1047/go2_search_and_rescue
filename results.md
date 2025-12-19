@@ -10,7 +10,8 @@ title: Results
 
 This section presents the experimental results of the autonomous exploration pipeline operating on Unitree’s Go2 robot. The goal of these experiments was to evaluate the system’s ability to autonomously explore an unknown maze environment, map the maze using LiDAR, and navigate safely using frontier-based planning and the Navigation2 (Nav2) stack. Figure 1 shows the closed-loop perception-planning-actuation pipeline used throughout the experiments.
 
-![][image6]  
+<img src="assets/img/image2.png" width="100%">
+
 Figure 1: Closed-loop autonomous exploration pipeline. LiDAR sensing is used to build an occupancy grid, which is then converted into a Nav2 costmap. Frontier-based planning selects exploration goals, and Nav2 generates paths that are executed by the Go2 robot, closing the loop through continued sensing.
 
 **Experimental Environment: Maze Setup**
@@ -32,7 +33,8 @@ Frontier points are boundaries between known free space and adjacent unknown reg
 
 At each iteration, the system selected the closest valid frontier (using Euclidean distance) and evaluated its feasibility using Nav2’s path planner. Frontiers for which no collision-free path could be generated were rejected. This filtering step prevented the robot from committing to unreachable or unsafe exploration goals. Figure 2 illustrates detected frontier cells overlaid on the costmap, along with the selected goal and planned path.
 
-**![][image7]**  
+<img src="assets/img/image3.png" width="100%">
+
 Figure 2: Frontier-based planning visualization. Detected frontier cells are shown on the costmap, along with the selected goal position and Nav2-generated optimal path from the Go2’s current pose.
 
 **Autonomous Navigation and Execution:**
@@ -41,10 +43,12 @@ Once a valid frontier was selected, the Go2 autonomously navigated toward the ta
 
 As new LiDAR data was received during motion, the occupancy grid and costmap were updated online. This integration between sensing, planning, and actuation allowed the robot to maintain stable and reliable navigation throughout the exploration task.
 
-![][image8]  
+<img src="assets/img/Before.png" width="100%">
+
 Figure 3: System state at the start of the experiment, showing initial frontier locations and limited map knowledge.
 
-![][image9]  
+<img src="assets/img/End.png" width="100%">
+
 Figure 4: System state at the end of the experiment. The robot has explored the corridor and identified the dead end, with no remaining reachable frontiers.
 
 **Video Demonstrations:**
