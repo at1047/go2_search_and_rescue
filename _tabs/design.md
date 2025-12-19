@@ -1,10 +1,9 @@
 ---
-layout: default
-title: Design 
----
-
-[Home](index.md) | [Design](design.md) | [Implementation](implementation.md) | [Results](results.md) | [Conclusion](conclusion.md)
-
+layout: page
+title: Design
+permalink: /design/
+icon: fas fa-pencil-ruler
+order: 1
 ---
 
 # **2.Design** {#2.design}

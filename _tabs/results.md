@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: Results
----
-
-[Home](index.md) | [Design](design.md) | [Implementation](implementation.md) | [Results](results.md) | [Conclusion](conclusion.md)
-
+permalink: /results/
+icon: fas fa-chart-line
+order: 3
 ---
 
 

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: Implementation
----
-
-[Home](index.md) | [Design](design.md) | [Implementation](implementation.md) | [Results](results.md) | [Conclusion](conclusion.md)
-
+permalink: /implementation/
+icon: fas fa-cogs
+order: 2
 ---
 
 

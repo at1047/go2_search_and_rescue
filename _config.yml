@@ -1,7 +1,41 @@
 title: Go2 Search and Rescue
-theme: jekyll-theme-cayman # This theme looks great for robotics
-show_downloads: true
-remote_theme: pages-themes/cayman@v0.2.0
+description: A robotics search and rescue project using Go2
+url: ""
+baseurl: ""
 
-# This tells GitHub to include a navigation menu if the theme supports it
-# or you can manually link them in your header.
+theme: jekyll-theme-chirpy
+permalink: /posts/:title/
+
+timezone: America/Los_Angeles
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "_tabs"
+      type: tabs
+    values:
+      layout: page
