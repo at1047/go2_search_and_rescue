@@ -9,6 +9,7 @@ from sensor_msgs.msg import PointCloud2
 from sensor_msgs_py import point_cloud2
 from nav_msgs.msg import OccupancyGrid
 from geometry_msgs.msg import Pose
+from tf2_ros import Buffer, TransformListener
 
 
 class LogOddsMapper(Node):
@@ -17,8 +18,8 @@ class LogOddsMapper(Node):
 
         # Map parameters
         self.declare_parameter("resolution", 0.05)
-        self.declare_parameter("width", 300)
-        self.declare_parameter("height", 300)
+        self.declare_parameter("width", 500)
+        self.declare_parameter("height", 500)
         self.res = self.get_parameter("resolution").value
         self.w   = self.get_parameter("width").value
         self.h   = self.get_parameter("height").value
@@ -31,8 +32,8 @@ class LogOddsMapper(Node):
 
         # Log-odds params
         self.L_occ  = np.log(0.7 / (1 - 0.7))    # hit
-        #self.L_free = np.log(0.4 / (1 - 0.4))    # miss
-        self.L_free = np.log(0.1 / (1 - 0.1)) #0.2 I have made undoing obstacles easier 
+        self.L_free = np.log(0.45 / (1 - 0.45))    # miss
+        #self.L_free = np.log(0.1 / (1 - 0.1)) #0.2 I have made undoing obstacles easier 
         self.L_min  = -2.0
         self.L_max  =  3.5
 
@@ -46,6 +47,10 @@ class LogOddsMapper(Node):
         # ROS I/O
         self.pc_sub = self.create_subscription(PointCloud2, "/utlidar/cloud_deskewed", self.pc_callback, 10)
         self.map_pub = self.create_publisher(OccupancyGrid, "map", 5)
+
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+
 
         self.get_logger().info("Log-odds occupancy mapper initialized")
 
@@ -93,7 +98,21 @@ class LogOddsMapper(Node):
     def pc_callback(self, msg):
 
         # Sensor origin is (0,0) in incoming frame
-        ox, oy = self.world_to_grid(0.0, 0.0)
+        #ox, oy = self.world_to_grid(0.0, 0.0)
+        # Get transform: odom -> utlidar_lidar
+        try:
+            tf = self.tf_buffer.lookup_transform(
+                "odom", "utlidar_lidar", rclpy.time.Time())
+        except Exception as e:
+            self.get_logger().warn(f"TF lookup failed: {e}")
+            return
+
+        # Extract translation
+        lx = tf.transform.translation.x
+        ly = tf.transform.translation.y
+
+        # Convert to grid coordinates
+        ox, oy = self.world_to_grid(lx, ly)
 
         # Process points
         for x, y, z in point_cloud2.read_points(msg, field_names=("x", "y", "z"), skip_nans=True):
