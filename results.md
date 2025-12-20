@@ -20,7 +20,7 @@ Experiments were conducted in an unknown indoor maze environment designed to eva
 
 
 <video height="700px" controls>
-  <source src="{{ '/assets/video/video_1.mp4' }}" type="video/mp4">
+  <source src="{{ '/assets/video/video_1.mp4' | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 This video shows the maze layout used in the experiments.
@@ -60,14 +60,14 @@ Figure 4: System state at the end of the experiment. The robot has explored the 
 These videos demonstrate the system operating in real-time.
 
 <video width="100%" controls>
-  <source src="{{ '/assets/video/video_2.mp4' }}" type="video/mp4">
+  <source src="{{ '/assets/video/video_2.mp4' | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 This video shows the full closed-loop exploration pipeline in operation, including frontier detection, Nav2 path planning, and autonomous navigation through the maze.
 
 <video height="700px" controls>
-  <source src="{{ '/assets/video/video_3.mp4' }}" type="video/mp4">
+  <source src="{{ '/assets/video/video_3.mp4' | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

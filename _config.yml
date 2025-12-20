@@ -4,3 +4,7 @@ show_downloads: true
 
 kramdown:
   input: GFM
+
+webrick:
+  headers:
+    'Content-Type': 'video/mp4'
