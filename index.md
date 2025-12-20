@@ -35,26 +35,18 @@ Crucially, this work contributes an open-source, documented approach to Unitree 
 
 # Team
 
-Jason:  
-*Bio:*  
+**Jason:**
+
 Jason is a Mechanical Engineering graduate student specializing in Robotics, with experience in advanced motion control systems for quadruped robots.
 
-*Major Contributions:*
+**Denae:**
 
-Denae:  
-*Bio:*  
-Denae is a PhD student in the EECS department, whose current project focuses on simulating a frontier-based exploration strategy for a quadruped robot.
+Denae is a PhD student in the EECS department, whose current project focuses on simulating a frontier-based exploration strategy for a quadruped robot. Denae worked on frontier-based exploration logic, set up Ethernet-based networking for reliable internet connectivity on the robot, and launched and managed processes during experimental trials.
 
-*Major Contributions:*
+**Kabir:**
 
-Kabir:  
-*Bio:*  
-Kabir is an EECS undergrad student. He has worked on some projects involving autonomous vehicles and distributed ML systems.
+Kabir is an EECS undergrad student. He has worked on some projects involving autonomous vehicles and distributed ML systems. Kabir worked on the point cloud to occupancy grid conversion, debugging ros2 communication and timing issues, and tuning the path planning parameters. Kabir occasionally crashed the dog several times.
 
-*Major Contributions:*
+**Andrew:**
 
-Andrew:  
-*Bio:*  
-Andrew is a Mechanical Engineering graduate student specializing in Robotics with industry software engineering experience.
-
-*Major Contributions:*
+Andrew is a Mechanical Engineering graduate student specializing in Robotics with industry software engineering experience. Andrew debugged ROS2 communication issues, developed a frontier filtering algorithm, and resolved issues with the coordinate transform (TF) tree.

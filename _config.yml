@@ -2,9 +2,8 @@ title: Go2 Search and Rescue
 theme: jekyll-theme-cayman
 show_downloads: true
 
+# GitHub repository URL (optional - auto-detected on GitHub Pages)
+github_url: https://github.com/jabichebli/go2_search_and_rescue/tree/go2
+
 kramdown:
   input: GFM
-
-webrick:
-  headers:
-    'Content-Type': 'video/mp4'

@@ -24,6 +24,11 @@
         <a href="{{ site.baseurl }}/results" class="btn">Results</a>
         <a href="{{ site.baseurl }}/conclusion" class="btn">Conclusion</a>
         <a href="{{ site.baseurl }}/references" class="btn">References</a>
+        {% if site.github.repository_url %}
+          <a href="{{ site.github.repository_url }}" class="btn" target="_blank" rel="noopener">GitHub</a>
+        {% elsif site.github_url %}
+          <a href="{{ site.github_url }}" class="btn" target="_blank" rel="noopener">GitHub</a>
+        {% endif %}
       </nav>
     </header>
 
