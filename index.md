@@ -13,7 +13,7 @@ The challenge of autonomous robotic operation in hazardous, unknown environments
 
 The core goal is to develop and open-source a robust, autonomous exploration framework for the Unitree Go2 quadruped robot. This system must be capable of collision-free traversal and real-time environment mapping in unstructured, debris-filled spaces, integrating onboard odometry, the Navigation2 stack, and a custom frontier-based planning algorithm.
 
-*Project Significance and Technical Problems*
+## Project Significance and Technical Problems
 
 This project fuses complex legged mobility with real-time autonomy over three-dimensional obstacles common in disaster sites. Success requires solving three specific technical challenges:
 
@@ -23,7 +23,7 @@ This project fuses complex legged mobility with real-time autonomy over three-di
 
 3. Implementing a utility-based exploration function that intelligently balances travel cost against directional progress toward the mission goal, ensuring efficient and complete area coverage without prior global knowledge.
 
-*Real-World Robotics Applications*
+## Real-World Robotics Applications
 
 The resulting framework is directly transferable to high-value robotics applications beyond SAR, including:
 
