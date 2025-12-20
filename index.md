@@ -37,7 +37,7 @@ Crucially, this work contributes an open-source, documented approach to Unitree 
 
 **Jason:**
 
-Jason is a Mechanical Engineering graduate student specializing in Robotics, with experience in advanced motion control systems for quadruped robots.
+Jason is a Mechanical Engineering graduate student specializing in Robotics, with experience in advanced motion control systems for quadruped robots. Jason was able to utilize his experience with the Go 2 hardware, develop a low-level communication module between ROS2 and the Unitree API, and debugged ROS2 communication issues.
 
 **Denae:**
 
