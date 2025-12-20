@@ -1,0 +1,11 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Custom H2 Styling */
+h2 {
+  font-size: 1.3rem !important; /* Adjust size as needed */
+  font-weight: bold !important;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
